@@ -1,0 +1,51 @@
+.userDataContainer {
+    padding: 1px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+}
+
+.userDataContainer div {
+    margin: 1px;
+    padding: 2px;
+}
+
+.userImage {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 65%;
+    height: auto;
+}
+
+.userData {
+    font-size: 20px;
+}
+
+.userDataContainer div h4 {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.Form button{
+    margin-top: 2px;
+    width: 35%;
+}
+
+@media (max-width: 414px) {
+    .userDataContainer{
+        padding-top: 25%;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+}

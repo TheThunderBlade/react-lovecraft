@@ -1,0 +1,5 @@
+{
+  "port": 5000,
+  "mongoUri": "mongodb+srv://kiseki:zxc@mern-lovecraft.hokkr.mongodb.net/Site-Data?retryWrites=true&w=majority",
+  "jwtSecret": "zxc"
+}

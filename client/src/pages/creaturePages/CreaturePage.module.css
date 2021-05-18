@@ -1,0 +1,18 @@
+.mainSection {
+    padding-top: 4%;
+}
+
+.mainSection p{
+    font-size: 25px;
+    color: white;
+}
+
+@media (max-width: 414px) {
+    .mainSection{
+        padding-top: 35%;
+    }
+
+    .mainSection p {
+        font-size: 20px;
+    }
+}

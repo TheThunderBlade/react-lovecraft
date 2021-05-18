@@ -1,0 +1,18 @@
+.RegDiv{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.RegDiv form div label{
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 414px) {
+    .RegDiv {
+        padding-top: 35%;
+    }
+}

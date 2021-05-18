@@ -1,0 +1,52 @@
+.bookContent {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    padding: 2%;
+    color: white;
+}
+
+.bookContent div img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: auto;
+    border: black solid 2px;
+    border-radius: 10px;
+}
+
+.downloadSection a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.downloadSection a:hover {
+    font-size: 23px;
+}
+
+.downloadSection ul {
+    list-style: none;
+}
+
+.linkSection {
+    display: grid;
+    grid-template-columns: 0.2fr 5fr;
+    padding: 5px;
+}
+
+.linkSection a {
+    margin-left: 1%;
+}
+
+@media (max-width: 414px) {
+    .bookContent{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 0.7fr;
+        justify-content: center;
+    }
+
+    .downloadSection h4 {
+        text-align: center;
+    }
+}
