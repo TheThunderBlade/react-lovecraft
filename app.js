@@ -1,12 +1,14 @@
 const express = require('express')
 const config = require('config')
 const mongoose = require('mongoose')
+require('dotenv').config()
 
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const corsMiddleware = require('./middleware/cors.middleware')
+const path = require('path')
 
-const PORT = config.get('port') || 5000
+const PORT = process.env.PORT || config.get('port')
 const app = express()
 
 app.use(bodyParser.json())
@@ -21,6 +23,8 @@ app.use(
 );
 app.use(corsMiddleware)
 
+app.use(express.static(path.join(__dirname, 'client/build')))
+
 app.use('/api/auth', require('./routes/auth.routes'))
 app.use('/api/user', require('./routes/user.routes'))
 
@@ -32,11 +36,11 @@ const connectionParams = {
 }
 
 async function start() {
-    try{
-        await mongoose.connect(config.get('mongoUri'), connectionParams)
+    try {
+        await mongoose.connect(process.env.MONGO_URI, connectionParams)
 
         app.listen(PORT, () => console.log(`App has been started ob port ${PORT}...`))
-    }catch (e) {
+    } catch (e) {
         console.log(e)
         process.exit(1)
     }

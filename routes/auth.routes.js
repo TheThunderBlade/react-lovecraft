@@ -1,7 +1,6 @@
 const {Router} = require('express')
 const User = require('../models/User')
 const router = Router()
-const config = require('config')
 
 const bсrypt = require('bcryptjs')
 
@@ -71,7 +70,7 @@ router.post(
                     userEmail: user.email,
                     userPassword: password
                 },
-                config.get('jwtSecret'),
+                process.env.JWT_SECRET,
                 {expiresIn: '1h'}
             )
 
